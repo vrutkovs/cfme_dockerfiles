@@ -4,4 +4,7 @@ set -u
 
 cd /code
 pip install -r requirements.txt --no-cache-dir
-py.test -v $@
+
+# Colored text
+export TERM=xterm
+exec py.test -v $@
